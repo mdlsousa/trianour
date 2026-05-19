@@ -1,0 +1,38 @@
+export const recipes = [
+  {
+    id: "1",
+    title: "Mousse proteico anti-craving",
+    time: "10 min",
+    difficulty: "Fácil",
+    image: "from-rose-100 to-amber-100",
+    tags: ["Doce saudável", "Alta proteína"],
+    saves: 234,
+  },
+  {
+    id: "2",
+    title: "Bowl mediterrâneo express",
+    time: "25 min",
+    difficulty: "Fácil",
+    image: "from-emerald-100 to-lime-100",
+    tags: ["Almoço", "Meal prep"],
+    saves: 189,
+  },
+  {
+    id: "3",
+    title: "Salmão com ervas — jantar família",
+    time: "35 min",
+    difficulty: "Médio",
+    image: "from-sky-100 to-indigo-100",
+    tags: ["Família", "Ômega-3"],
+    saves: 412,
+  },
+  {
+    id: "4",
+    title: "Overnight oats tropical",
+    time: "5 min + geladeira",
+    difficulty: "Fácil",
+    image: "from-orange-100 to-yellow-100",
+    tags: ["Café da manhã"],
+    saves: 156,
+  },
+];

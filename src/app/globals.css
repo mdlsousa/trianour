@@ -1,26 +1,100 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-background: oklch(0.99 0.005 95);
+  --color-foreground: oklch(0.18 0.02 260);
+  --color-card: oklch(1 0.003 95);
+  --color-card-foreground: oklch(0.18 0.02 260);
+  --color-popover: oklch(1 0.003 95);
+  --color-popover-foreground: oklch(0.18 0.02 260);
+  --color-primary: oklch(0.42 0.09 165);
+  --color-primary-foreground: oklch(0.99 0.005 95);
+  --color-secondary: oklch(0.96 0.015 95);
+  --color-secondary-foreground: oklch(0.28 0.03 260);
+  --color-muted: oklch(0.96 0.01 95);
+  --color-muted-foreground: oklch(0.5 0.02 260);
+  --color-accent: oklch(0.72 0.12 75);
+  --color-accent-foreground: oklch(0.22 0.04 75);
+  --color-destructive: oklch(0.55 0.2 25);
+  --color-border: oklch(0.92 0.01 95);
+  --color-input: oklch(0.92 0.01 95);
+  --color-ring: oklch(0.42 0.09 165);
+  --color-sage: oklch(0.52 0.08 165);
+  --color-gold: oklch(0.72 0.12 75);
+  --color-cream: oklch(0.97 0.02 95);
+  --color-glass: oklch(1 0.003 95 / 0.72);
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --color-background: oklch(0.14 0.015 260);
+  --color-foreground: oklch(0.96 0.01 95);
+  --color-card: oklch(0.18 0.02 260);
+  --color-card-foreground: oklch(0.96 0.01 95);
+  --color-popover: oklch(0.18 0.02 260);
+  --color-popover-foreground: oklch(0.96 0.01 95);
+  --color-primary: oklch(0.62 0.1 165);
+  --color-primary-foreground: oklch(0.14 0.015 260);
+  --color-secondary: oklch(0.22 0.02 260);
+  --color-secondary-foreground: oklch(0.92 0.01 95);
+  --color-muted: oklch(0.22 0.02 260);
+  --color-muted-foreground: oklch(0.65 0.02 260);
+  --color-accent: oklch(0.75 0.11 75);
+  --color-accent-foreground: oklch(0.18 0.03 75);
+  --color-border: oklch(0.28 0.02 260);
+  --color-input: oklch(0.28 0.02 260);
+  --color-ring: oklch(0.62 0.1 165);
+  --color-glass: oklch(0.18 0.02 260 / 0.75);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  .font-display {
+    font-family: var(--font-display), Georgia, serif;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .glass {
+    @apply border border-white/20 bg-glass backdrop-blur-xl;
+  }
+
+  .gradient-mesh {
+    background:
+      radial-gradient(ellipse 80% 50% at 20% -10%, oklch(0.72 0.12 75 / 0.15), transparent),
+      radial-gradient(ellipse 60% 40% at 90% 10%, oklch(0.52 0.08 165 / 0.12), transparent),
+      radial-gradient(ellipse 50% 30% at 50% 100%, oklch(0.62 0.1 165 / 0.08), transparent);
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-sage to-gold bg-clip-text text-transparent;
+  }
+
+  .card-premium {
+    @apply rounded-2xl border border-border/60 bg-card shadow-sm shadow-black/[0.03] transition-all duration-300 hover:shadow-md hover:shadow-black/[0.05];
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
 }
