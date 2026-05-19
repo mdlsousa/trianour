@@ -7,7 +7,7 @@ High-fidelity, fully navigable frontend prototype for investor and UX validation
 
 ## Stack
 
-- Next.js 15 (App Router)
+- Next.js 16 (App Router)
 - TypeScript
 - Tailwind CSS v4
 - Framer Motion
@@ -44,3 +44,9 @@ Open [http://localhost:3000](http://localhost:3000)
 **Helena** (8) & **Theo** (5) — adapted portions
 
 No backend, auth, or database — mock data only.
+
+## Live demo
+
+- **Production:** https://trianour.vercel.app
+- **Legacy alias:** https://trianox.vercel.app (redirects to same deployment)
+- **GitHub:** https://github.com/mdlsousa/trianour
