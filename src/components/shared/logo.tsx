@@ -15,7 +15,7 @@ export function Logo({
         <Leaf className="h-5 w-5 text-primary-foreground" strokeWidth={2.2} />
       </div>
       <span className="text-lg font-semibold tracking-tight">
-        Tria<span className="text-primary">Nox</span>
+        Tria<span className="text-primary">Nour</span>
       </span>
     </Link>
   );

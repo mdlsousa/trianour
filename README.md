@@ -1,6 +1,9 @@
-# TriaNox — Premium Nutrition Experience Mockup
+# TriaNour — Premium Nutrition Experience Mockup
 
 High-fidelity, fully navigable frontend prototype for investor and UX validation.
+
+**Tria** = nutricionista cria · AI apoia · família vive  
+**Nour** = nourishment — nutrition as a living experience, not static PDFs.
 
 ## Stack
 

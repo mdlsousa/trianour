@@ -1,7 +1,7 @@
 export const brand = {
-  name: "TriaNox",
-  tagline: "Nutrition experiences, not static PDFs.",
-  hero: "From static diet PDFs to living nutrition experiences.",
+  name: "TriaNour",
+  tagline: "Nutrição que se vive.",
+  hero: "De PDFs estáticos a experiências vivas de nutrição.",
 } as const;
 
 export const routes = {

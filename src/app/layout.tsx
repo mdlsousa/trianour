@@ -15,8 +15,8 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   title: {
-    default: "TriaNox — Nutrition experiences",
-    template: "%s | TriaNox",
+    default: "TriaNour — Nutrition experiences",
+    template: "%s | TriaNour",
   },
   description:
     "From static diet PDFs to living nutrition experiences. Premium platform for nutritionists and families.",

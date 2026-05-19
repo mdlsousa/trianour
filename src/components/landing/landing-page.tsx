@@ -109,7 +109,7 @@ export function LandingPage() {
                 <div className="h-3 w-3 rounded-full bg-red-400/80" />
                 <div className="h-3 w-3 rounded-full bg-amber-400/80" />
                 <div className="h-3 w-3 rounded-full bg-emerald-400/80" />
-                <span className="ml-2 text-xs text-muted-foreground">patient.trianox.app — Ricardo</span>
+                <span className="ml-2 text-xs text-muted-foreground">patient.trianour.app — Ricardo</span>
               </div>
               <div className="grid gap-0 md:grid-cols-2">
                 <div className="border-r border-border/60 bg-gradient-to-br from-emerald-50 to-cream p-6 dark:from-emerald-950/30 dark:to-background">
@@ -298,7 +298,7 @@ export function LandingPage() {
 
       <footer className="border-t border-border/60 px-6 py-12 text-center text-sm text-muted-foreground">
         <Logo href="/" className="justify-center" />
-        <p className="mt-4">© 2026 TriaNox. Mockup investidor — sem backend.</p>
+        <p className="mt-4">© 2026 TriaNour. Mockup investidor — sem backend.</p>
       </footer>
     </div>
   );

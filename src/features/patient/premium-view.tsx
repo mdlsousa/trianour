@@ -21,7 +21,7 @@ export function PremiumView() {
         <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-gold to-accent shadow-lg shadow-gold/30">
           <Crown className="h-8 w-8 text-accent-foreground" />
         </div>
-        <Badge variant="gold" className="mt-4">TriaNox Plus</Badge>
+        <Badge variant="gold" className="mt-4">TriaNour Plus</Badge>
         <h1 className="font-display mt-4 text-2xl font-semibold">
           Nutrição premium, todos os dias
         </h1>
@@ -71,7 +71,7 @@ export function PremiumView() {
           ))}
         </ul>
         <Button variant="gold" size="lg" className="mt-6 w-full">
-          Ativar TriaNox Plus
+          Ativar TriaNour Plus
         </Button>
         <Button asChild variant="ghost" size="sm" className="mt-2 w-full">
           <Link href="/patient">Continuar no plano básico</Link>
