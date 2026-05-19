@@ -43,8 +43,8 @@ export function AIChatView() {
             <Sparkles className="h-5 w-5 text-primary-foreground" />
           </div>
           <div>
-            <h1 className="font-semibold">AI Nutrition</h1>
-            <p className="text-xs text-muted-foreground">Contextual · Humano · Premium</p>
+            <h1 className="font-semibold">TriaNour AI</h1>
+            <p className="text-xs text-muted-foreground">Nutrição contextual · humana · premium</p>
           </div>
         </div>
         <div className="mt-4 flex flex-wrap gap-2">

@@ -1,21 +1,45 @@
 import Link from "next/link";
-import { Leaf } from "lucide-react";
+import { TriaNourLogoMark } from "@/components/shared/trianour-logo-mark";
+import { brand } from "@/design-system/tokens";
 import { cn } from "@/lib/utils";
 
 export function Logo({
   className,
   href = "/",
+  showWordmark = true,
+  size = "md",
 }: {
   className?: string;
   href?: string;
+  showWordmark?: boolean;
+  size?: "sm" | "md" | "lg";
 }) {
+  const markSize = size === "sm" ? 28 : size === "lg" ? 44 : 36;
+  const textClass =
+    size === "sm"
+      ? "text-base"
+      : size === "lg"
+        ? "text-xl"
+        : "text-lg";
+
   return (
     <Link href={href} className={cn("flex items-center gap-2.5", className)}>
-      <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-sage shadow-sm shadow-primary/20">
-        <Leaf className="h-5 w-5 text-primary-foreground" strokeWidth={2.2} />
-      </div>
-      <span className="text-lg font-semibold tracking-tight">
-        Tria<span className="text-primary">Nour</span>
+      <TriaNourLogoMark size={markSize} />
+      {showWordmark && (
+        <span className={cn("font-semibold tracking-tight", textClass)}>
+          Tria<span className="text-primary">Nour</span>
+        </span>
+      )}
+    </Link>
+  );
+}
+
+export function LogoCompact({ className }: { className?: string }) {
+  return (
+    <Link href="/patient" className={cn("flex items-center gap-2", className)}>
+      <TriaNourLogoMark size={32} />
+      <span className="text-sm font-semibold tracking-tight">
+        {brand.name}
       </span>
     </Link>
   );

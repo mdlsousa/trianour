@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { routes } from "@/design-system/tokens";
+import { LogoCompact } from "@/components/shared/logo";
 
 const tabs = [
   { href: routes.patient.home, label: "Hoje", icon: Home },
@@ -22,10 +23,18 @@ const tabs = [
 
 export function PatientShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const showHeader = pathname !== routes.patient.premium;
 
   return (
     <div className="relative mx-auto min-h-screen max-w-lg bg-background pb-24">
-      <div className="gradient-mesh pointer-events-none fixed inset-0 max-w-lg mx-auto opacity-60" />
+      <div className="gradient-mesh pointer-events-none fixed inset-0 mx-auto max-w-lg opacity-60" />
+
+      {showHeader && (
+        <header className="sticky top-0 z-40 border-b border-border/40 bg-background/80 px-4 py-3 backdrop-blur-xl">
+          <LogoCompact />
+        </header>
+      )}
+
       <div className="relative">{children}</div>
 
       <nav className="fixed bottom-0 left-1/2 z-50 w-full max-w-lg -translate-x-1/2 safe-bottom">

@@ -15,11 +15,15 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   title: {
-    default: "TriaNour — Nutrition experiences",
+    default: "TriaNour — Nutrição que se vive",
     template: "%s | TriaNour",
   },
   description:
-    "From static diet PDFs to living nutrition experiences. Premium platform for nutritionists and families.",
+    "De PDFs estáticos a experiências vivas de nutrição. Plataforma premium para nutricionistas e famílias.",
+  icons: {
+    icon: "/trianour-icon.svg",
+    apple: "/trianour-icon.svg",
+  },
 };
 
 export default function RootLayout({

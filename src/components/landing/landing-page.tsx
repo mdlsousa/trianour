@@ -125,7 +125,7 @@ export function LandingPage() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <p className="text-xs font-medium text-primary">AI Support</p>
+                  <p className="text-xs font-medium text-primary">TriaNour AI</p>
                   <div className="mt-3 space-y-3">
                     <div className="rounded-2xl bg-secondary px-4 py-3 text-sm">Estou com vontade de doces 😅</div>
                     <div className="rounded-2xl border border-primary/20 bg-primary/5 px-4 py-3 text-sm">
